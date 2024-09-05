@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container-fluid p-4" id="conainer-1">
+        <div class="bg-white inner-white-card white-box w-auto flex-md-row flex-column text-sm-center text-md-start p-4">
+            <div class=""><img src="4105851_2136025.jpg" width="300px" height="300px"/></div>
+        <div >
+            <h1 class="heading">todo list</h1>
+
+            <form>
+                <div class="form-div">
+                    <input type="text" value="" class="todoValue">
+                    <button class="Addbutton">Add</button>
+                </div>
+                <div class="todoLists">
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- <script>
+
+        // Adding entered data in the list format 
+
+        const todoLists = document.querySelector(".todoLists");
+        const listValue = document.querySelector(".todoValue");
+        let todoListValue = [];
+
+
+        const getTodoListFromLS = () => {
+            return JSON.parse(localStorage.getItem("todoyoutube")) || [];
+        };
+
+
+
+        // variable declaration to create a local storage
+        const addTodoListLocalStorage = (todo) => {
+            return localStorage.setItem("todoyoutube", JSON.stringify(todo));
+        };
+
+
+
+        const showTodoList = () => {
+            todoListValue = getTodoListFromLS();
+            todoListValue.forEach((curTodo) => {
+                const liElement = document.createElement("li");
+                liElement.innerHTML = newTodo;
+                todoLists.append(liElement);
+            });
+        };
+
+
+
+
+        const removeTodoList = (e) => {
+            console.log(e.target.textContent);
+            let currentTodo = e.target;
+            console.log(todoListValue);
+
+            updatedTodoList = todoListValue.filter((curTodoValue) => curTodoValue != currentTodo.textContent);
+
+            addTodoListLocalStorage(updatedTodoList);
+            currentTodo.remove();
+            console.log(updatedTodoList);
+
+        };
+
+        const addTodoList = (e) => {
+            e.preventDefault();
+
+
+
+            todoListValue = getTodoListFromLS();
+            let newTodo = listValue.value.trim();
+            console.log(newTodo);
+
+
+            listValue.value = "";
+
+            if (newTodo.length != 0 && !todoListValue.includes(newTodo)) {
+                console.log(typeof todoListValue);
+                todoListValue.push(newTodo);
+                todoListValue = [...new Set(todoListValue)]
+
+
+
+                // function declaration to create a local storage
+                addTodoListLocalStorage(todoListValue);
+                // to display the list items which is entered into the input field 
+                const liElement = document.createElement("li");
+                liElement.innerHTML = newTodo;
+                todoLists.append(liElement);
+            }
+            // console.log("Hello Js Best Course");
+
+
+
+        };
+
+        document.querySelector(".Addbutton").addEventListener("click", (e) => {
+            addTodoList(e);
+        });
+
+
+        todoLists.addEventListener('click', (e) => removeTodoList(e))
+    </script> -->
+<script src="todolist.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
